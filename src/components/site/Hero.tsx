@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 import { IMAGES } from "@/lib/images";
 
 const floatingStats = [
@@ -9,6 +10,60 @@ const floatingStats = [
   { number: "500+", label: "Active Volunteers", color: "from-green-500 to-emerald-500" },
   { number: "₹50L+", label: "Donations Raised", color: "from-accent-500 to-accent-600" },
 ];
+
+function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1, y: 0 });
+  }, [controls]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={controls}
+      transition={{ duration: 0.6, delay }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function AnimatedScroll({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1, y: 0 });
+  }, [controls]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 0.8, delay }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function AnimatedSidebar({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1, x: 0 });
+  }, [controls]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      animate={controls}
+      transition={{ duration: 0.8, delay }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function Hero() {
   return (
@@ -37,18 +92,14 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-start px-4 sm:px-6 lg:pl-8 lg:pr-16">
         <div className="w-full pt-12 sm:pt-16 lg:pt-20">
           <div className="max-w-3xl ml-0">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <AnimatedSection>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 mb-8">
                 <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-xs font-semibold uppercase tracking-widest text-green-300">
                   Registered NGO Since 2020
                 </span>
               </div>
-            </motion.div>
+            </AnimatedSection>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -104,45 +155,39 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs font-medium uppercase tracking-widest text-white/60">
-            Scroll
-          </span>
-          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center p-1">
-            <div className="w-1.5 h-2.5 rounded-full bg-white/80 animate-bounce" />
+      <AnimatedScroll delay={0.6}>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-xs font-medium uppercase tracking-widest text-white/60">
+              Scroll
+            </span>
+            <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center p-1">
+              <div className="w-1.5 h-2.5 rounded-full bg-white/80 animate-bounce" />
+            </div>
           </div>
         </div>
-      </motion.div>
+      </AnimatedScroll>
 
       <div className="absolute bottom-8 right-8 z-10 hidden lg:block">
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col gap-3"
-        >
-          {floatingStats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className="group flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-3 transition-all duration-300 hover:bg-white/20 hover:scale-105"
-              style={{ animationDelay: `${i * 0.15}s` }}
-            >
-              <div className={`h-8 w-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center`}>
-                <span className="text-xs font-bold text-white">{stat.number.charAt(0)}</span>
+        <AnimatedSidebar delay={0.8}>
+          <div className="flex flex-col gap-3">
+            {floatingStats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className="group flex items-center gap-3 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-3 transition-all duration-300 hover:bg-white/20 hover:scale-105"
+                style={{ animationDelay: `${i * 0.15}s` }}
+              >
+                <div className={`h-8 w-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center`}>
+                  <span className="text-xs font-bold text-white">{stat.number.charAt(0)}</span>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-white">{stat.number}</p>
+                  <p className="text-[10px] text-white/80 font-medium">{stat.label}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-bold text-white">{stat.number}</p>
-                <p className="text-[10px] text-white/80 font-medium">{stat.label}</p>
-              </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </AnimatedSidebar>
       </div>
     </section>
   );

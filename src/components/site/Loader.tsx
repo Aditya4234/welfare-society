@@ -1,13 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function Loader() {
   const [loading, setLoading] = useState(true);
+  const mounted = useRef(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
+    mounted.current = true;
+    const timer = setTimeout(() => {
+      if (mounted.current) setLoading(false);
+    }, 1500);
+    return () => {
+      mounted.current = false;
+      clearTimeout(timer);
+    };
   }, []);
 
   if (!loading) return null;

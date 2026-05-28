@@ -1,21 +1,38 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
 import { IMPACT_STATS } from "@/lib/site";
 
 function Counter({ value, suffix, prefix }: { value: number; suffix: string; prefix: string }) {
   const [count, setCount] = useState(0);
+  const [isInView, setIsInView] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!isInView) return;
+    let cancelled = false;
     let start = 0;
     const duration = 2000;
     const step = Math.ceil(value / (duration / 16));
     const timer = setInterval(() => {
       start += step;
+      if (cancelled) return;
       if (start >= value) {
         setCount(value);
         clearInterval(timer);
@@ -23,7 +40,10 @@ function Counter({ value, suffix, prefix }: { value: number; suffix: string; pre
         setCount(start);
       }
     }, 16);
-    return () => clearInterval(timer);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+    };
   }, [isInView, value]);
 
   return (
