@@ -58,7 +58,7 @@ export function PaymentButton({ amount, children, className }: any) {
       },
 
       theme: {
-        color: "#f97316",
+        color: "#22C55E",
       },
     };
 

@@ -76,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} h-full scroll-smooth`} suppressHydrationWarning>
-      <body className="bg-[var(--surface)] font-sans text-slate-900 antialiased">
+      <body className="bg-white dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100 antialiased">
         <ThemeProvider>
           <a
             href="#main"
@@ -87,6 +87,15 @@ export default function RootLayout({
           <Loader />
           <ScrollProgress />
           <div className="app-bg" aria-hidden />
+          <div className="app-bg-noise" aria-hidden />
+          <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden" aria-hidden>
+            <div className="absolute -top-[15%] -left-[10%] w-[45%] h-[45%] rounded-full bg-gradient-to-br from-blue-500/6 to-transparent blur-[140px] animate-blob" />
+            <div className="absolute -top-[8%] -right-[12%] w-[38%] h-[38%] rounded-full bg-gradient-to-bl from-emerald-500/6 to-transparent blur-[120px] animate-blob animation-delay-2000" />
+            <div className="absolute bottom-[10%] left-[3%] w-[30%] h-[30%] rounded-full bg-gradient-to-tr from-green-500/5 to-transparent blur-[120px] animate-float-slow animation-delay-4000" />
+            <div className="absolute bottom-[5%] right-[3%] w-[35%] h-[35%] rounded-full bg-gradient-to-tl from-indigo-500/5 to-transparent blur-[140px] animate-float-slow animation-delay-2000" />
+            <div className="absolute top-[35%] left-[38%] w-[25%] h-[25%] rounded-full bg-gradient-to-br from-emerald-400/4 to-transparent blur-[100px] animate-blob animation-delay-4000" />
+            <div className="absolute top-[60%] left-[60%] w-[20%] h-[20%] rounded-full bg-gradient-to-bl from-purple-500/3 to-transparent blur-[100px] animate-float-slow" />
+          </div>
           <SiteHeader />
           <div className="flex min-h-screen flex-col pt-16">
             {children}

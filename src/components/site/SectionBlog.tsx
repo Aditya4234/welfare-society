@@ -18,9 +18,12 @@ export function SectionBlog() {
 
   return (
     <section id="blog" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-green-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-blue-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(59,130,246,0.12),transparent)]" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/5 blur-3xl" />
       </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -29,13 +32,13 @@ export function SectionBlog() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-800 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-brand-700 dark:text-brand-200 mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white mb-6 ring-1 ring-white/20 backdrop-blur-sm">
             Blog & News
           </div>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-950 dark:text-white sm:text-4xl lg:text-5xl leading-[1.1]">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl leading-[1.1]">
             Latest Updates
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white">
             Stay informed about our campaigns, events, and impact stories.
           </p>
         </motion.div>
@@ -87,15 +90,15 @@ export function SectionBlog() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <div className="p-5">
-                <p className="text-xs text-slate-400 dark:text-slate-500 mb-2">{post.date}</p>
-                <h3 className="font-display text-base font-semibold text-brand-950 dark:text-white mb-2 line-clamp-2 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+                <p className="text-xs text-slate-500 dark:text-slate-300 mb-2">{post.date}</p>
+                <h3 className="font-display text-base font-semibold text-white mb-2 line-clamp-2 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3">
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
                   {post.excerpt}
                 </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">{post.author}</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-300">{post.author}</span>
                   <button className="text-xs font-semibold text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors inline-flex items-center gap-1">
                     Read More
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

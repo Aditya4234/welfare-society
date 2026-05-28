@@ -16,7 +16,7 @@ export function SectionGallery() {
     : GALLERY_IMAGES.filter((img) => img.category === filter);
 
   return (
-    <section id="gallery" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+    <section id="gallery" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28 bg-transparent">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

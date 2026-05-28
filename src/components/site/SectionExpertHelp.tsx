@@ -23,7 +23,7 @@ export function SectionExpertHelp() {
               {PROGRAM_ICONS[i] ?? PROGRAM_ICONS[0]}
             </div>
             <h2 className="font-display text-2xl font-semibold text-brand-900 leading-tight">{row.title}</h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">{row.body}</p>
+            <p className="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">{row.body}</p>
             <p className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
               {row.links.map((l) => (
                 <a key={l.label} href={l.href} className="inline-flex items-center gap-1 text-accent-600 underline-offset-4 transition-all duration-300 hover:underline group-hover:text-accent-700">
@@ -40,7 +40,7 @@ export function SectionExpertHelp() {
 
       <div className="card mt-16 rounded-2xl px-8 py-10 text-center transition-shadow duration-300 hover:shadow-md animate-fade-in-up">
         <p className="font-display text-lg font-semibold text-brand-900">Are you a caregiver or community partner?</p>
-        <p className="mt-3 text-slate-600 leading-relaxed">We have resources for you too — guides, peer circles, and training sessions.</p>
+        <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">We have resources for you too — guides, peer circles, and training sessions.</p>
         <a href="#resources" className="mt-5 inline-flex items-center gap-1 font-semibold text-accent-600 underline-offset-4 transition-all duration-300 hover:underline group">
           Browse caregiver & partner resources
           <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

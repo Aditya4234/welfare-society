@@ -51,7 +51,7 @@ export function SectionFAQ() {
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl lg:text-[2.75rem] leading-[1.1]">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-slate-600">
+          <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Find answers to common questions about our work and how you can help.
           </p>
           </div>
@@ -60,7 +60,7 @@ export function SectionFAQ() {
           {FAQ_ITEMS.map((item, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-brand-100 bg-white shadow-sm transition-all duration-300 hover:shadow-md"
+              className="rounded-2xl border border-brand-100 bg-white dark:bg-slate-800 dark:border-slate-700 shadow-sm transition-all duration-300 hover:shadow-md"
             >
               <button
                 onClick={() => toggle(index)}
@@ -87,7 +87,7 @@ export function SectionFAQ() {
                 }`}
               >
                 <div className="px-6 pb-5 sm:px-8 sm:pb-6">
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                     {item.answer.replace("{SITE.name}", SITE.name)}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export function SectionFAQ() {
           </div>
 
           <div className="mt-12 text-center">
-          <p className="text-slate-600">Still have questions?</p>
+          <p className="text-slate-600 dark:text-slate-300">Still have questions?</p>
           <a
             href="#contact"
             className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-900 px-8 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-brand-800 hover:scale-[1.02] active:scale-[0.98]"

@@ -90,7 +90,7 @@ export function SectionContact() {
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{item.label}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">{item.label}</p>
                   {"href" in item && item.href ? (
                     <a className="mt-0.5 font-medium text-sm text-slate-900 dark:text-white underline-offset-4 hover:underline" href={item.href}>
                       {item.value}

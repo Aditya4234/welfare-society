@@ -48,7 +48,7 @@ export default function OurHeadPage() {
         <SectionShell tone="surface" id="about-president">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative mx-auto w-full max-w-md lg:mx-0">
-              <div className="aspect-[3/4] overflow-hidden rounded-3xl bg-white/70 shadow-md ring-1 ring-brand-900/10">
+              <div className="aspect-[3/4] overflow-hidden rounded-3xl bg-white/70 dark:bg-slate-800/70 shadow-md ring-1 ring-brand-900/10">
                 <Image
                   src="/image/president.png"
                   alt="Mrs. Ranju - President"
@@ -58,30 +58,30 @@ export default function OurHeadPage() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-white/85 px-4 py-3 shadow-md ring-1 ring-brand-900/10 backdrop-blur">
+              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-white/85 dark:bg-slate-800/85 px-4 py-3 shadow-md ring-1 ring-brand-900/10 backdrop-blur">
                 <p className="text-xs font-semibold text-brand-950">ESTD {SITE.establishedYear}</p>
-                <p className="text-[10px] text-slate-500">{SITE.registrationNo}</p>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">{SITE.registrationNo}</p>
               </div>
             </div>
 
             <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-brand-900/10 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-700">
+              <p className="inline-flex items-center gap-2 rounded-full border border-brand-900/10 bg-white/70 dark:bg-slate-800/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
                 Founder &amp; President
               </p>
-              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-brand-950 sm:text-5xl">
+              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-brand-950 dark:text-white sm:text-5xl">
                 Mrs. Ranju
               </h1>
-              <p className="mt-4 text-lg text-slate-600">{SITE.name}</p>
+              <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{SITE.name}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <span className="rounded-full border border-brand-900/10 bg-white/70 px-4 py-2 text-sm text-slate-700">
+                <span className="rounded-full border border-brand-900/10 bg-white/70 dark:bg-slate-800/70 px-4 py-2 text-sm text-slate-700 dark:text-slate-300">
                   {SITE.regType}
                 </span>
-                <span className="rounded-full border border-brand-900/10 bg-white/70 px-4 py-2 text-sm text-slate-700">
+                <span className="rounded-full border border-brand-900/10 bg-white/70 dark:bg-slate-800/70 px-4 py-2 text-sm text-slate-700 dark:text-slate-300">
                   {SITE.taxExemption}
                 </span>
               </div>
-              <p className="mt-6 text-base leading-relaxed text-slate-600">
+              <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-300">
                 Leading with compassion and dedication, Mrs. Ranju has been the guiding force behind{" "}
                 {SITE.name} since its establishment in {SITE.establishedYear}.
               </p>
@@ -94,7 +94,7 @@ export default function OurHeadPage() {
                 </a>
                 <a
                   href="/"
-                  className="inline-flex items-center justify-center rounded-xl border border-brand-900/12 bg-white/70 px-6 py-3 text-sm font-semibold text-brand-950 transition-all duration-300 hover:bg-white hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center rounded-xl border border-brand-900/12 bg-white/70 dark:bg-slate-800/70 px-6 py-3 text-sm font-semibold text-brand-950 dark:text-white transition-all duration-300 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Back to home
                 </a>
@@ -105,10 +105,10 @@ export default function OurHeadPage() {
 
         <SectionShell tone="surface">
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-3xl font-semibold text-brand-950 sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold text-brand-950 dark:text-white sm:text-4xl">
               About Mrs. Ranju
             </h2>
-            <div className="mt-8 space-y-6 text-lg leading-relaxed text-slate-600">
+            <div className="mt-8 space-y-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               <p>
                 Mrs. Ranju is the founder and president of {SITE.name}. Her vision of a society where
                 no family is left behind has driven the organization's mission since {SITE.establishedYear}.
@@ -131,8 +131,8 @@ export default function OurHeadPage() {
                 { value: "50+", label: "Health Camps Organized" },
               ].map((x) => (
                 <div key={x.label} className="card rounded-2xl p-6 text-center">
-                  <p className="font-display text-3xl font-bold text-brand-950">{x.value}</p>
-                  <p className="mt-2 text-sm text-slate-600">{x.label}</p>
+                  <p className="font-display text-3xl font-bold text-brand-950 dark:text-white">{x.value}</p>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{x.label}</p>
                 </div>
               ))}
             </div>
@@ -144,31 +144,31 @@ export default function OurHeadPage() {
             <svg className="mx-auto mb-6 h-12 w-12 text-brand-700 opacity-80" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
-            <blockquote className="font-display text-2xl font-medium leading-relaxed text-brand-950 italic">
+            <blockquote className="font-display text-2xl font-medium leading-relaxed text-brand-950 dark:text-white italic">
               &ldquo;{SITE.tagline}&rdquo;
             </blockquote>
-            <p className="mt-6 font-semibold text-brand-950">Mrs. Ranju</p>
-            <p className="text-sm text-slate-500">Founder &amp; President, {SITE.name}</p>
+            <p className="mt-6 font-semibold text-brand-950 dark:text-white">Mrs. Ranju</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">Founder &amp; President, {SITE.name}</p>
           </div>
         </SectionShell>
 
         <SectionShell id="contact" tone="surface">
           <div className="mx-auto max-w-3xl">
             <div className="text-center">
-              <h2 className="font-display text-2xl font-semibold text-brand-950 sm:text-3xl">
+              <h2 className="font-display text-2xl font-semibold text-brand-950 dark:text-white sm:text-3xl">
                 Get in Touch
               </h2>
-              <p className="mt-3 text-slate-600">Office and contact details for quick support.</p>
+              <p className="mt-3 text-slate-600 dark:text-slate-300">Office and contact details for quick support.</p>
             </div>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <div className="card rounded-2xl p-6">
-                <h3 className="font-semibold text-brand-950">Office Address</h3>
-                <p className="mt-2 text-sm text-slate-600">{CONTACT.address}</p>
+                <h3 className="font-semibold text-brand-950 dark:text-white">Office Address</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{CONTACT.address}</p>
               </div>
               <div className="card rounded-2xl p-6">
-                <h3 className="font-semibold text-brand-950">Contact Details</h3>
-                <p className="mt-2 text-sm text-slate-600">Phone: {CONTACT.helpline}</p>
-                <p className="text-sm text-slate-600">Email: {CONTACT.email}</p>
+                <h3 className="font-semibold text-brand-950 dark:text-white">Contact Details</h3>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Phone: {CONTACT.helpline}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">Email: {CONTACT.email}</p>
               </div>
             </div>
           </div>

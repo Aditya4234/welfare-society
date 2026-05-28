@@ -55,7 +55,7 @@ export function Carousel({ items, title, "aria-label": ariaLabel, className = ""
           </button>
         </div>
       </div>
-      <div className="relative mt-8 min-h-[140px] overflow-hidden rounded-2xl border border-brand-900/8 bg-white p-6 shadow-sm sm:p-8">
+      <div className="relative mt-8 min-h-[140px] overflow-hidden rounded-2xl border border-brand-900/8 bg-white dark:bg-slate-800 p-6 shadow-sm sm:p-8">
         <div key={items[index].id}>
           {items[index].content}
         </div>

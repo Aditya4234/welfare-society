@@ -13,14 +13,14 @@ export function SectionFreeSupport() {
             <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl lg:text-[2.75rem] leading-[1.1]">
               Get free, personalized information and support
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+            <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               Trained coordinators and social workers are available to speak with individuals and caregivers one-on-one — at no cost — about programs, paperwork, and next steps.
             </p>
           </div>
           <div className="mt-8 lg:mt-0 lg:shrink-0 lg:w-80 animate-fade-in-up" style={{animationDelay: '150ms'}}>
             <div className="card rounded-2xl p-8 transition-shadow duration-300 hover:shadow-md">
               <p className="font-semibold text-brand-900">Welfare information specialists</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                 Connect with our team for accurate information about eligibility, local resources, and emotional support during difficult stretches.
               </p>
               <div className="mt-5 space-y-3 text-sm">
@@ -32,16 +32,16 @@ export function SectionFreeSupport() {
                   </svg>
                 </a>
               </div>
-              <p className="mt-4 text-xs text-slate-500">{CONTACT.helplineHours}</p>
+              <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">{CONTACT.helplineHours}</p>
             </div>
           </div>
           </div>
 
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-brand-50/80 to-white/70 border border-brand-900/8 p-8 animate-fade-in-up" style={{animationDelay: '300ms'}}>
+          <div className="mt-12 rounded-2xl bg-gradient-to-br from-brand-50/80 to-white/70 dark:from-slate-800 dark:to-slate-900 border border-brand-900/8 p-8 animate-fade-in-up" style={{animationDelay: '300ms'}}>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>
                 <p className="font-display text-xl font-semibold text-brand-900">It is solidarity week at {SITE.name}</p>
-                <p className="mt-3 text-slate-600 leading-relaxed">
+                <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">
                   Do not miss your chance to give directly to our emergency relief fund this season — and have your gift matched on select days.
                 </p>
               </div>

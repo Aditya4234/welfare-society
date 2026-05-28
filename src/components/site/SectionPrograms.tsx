@@ -45,7 +45,7 @@ const colorClasses: Record<string, { bg: string; iconBg: string; text: string; b
 
 export function SectionPrograms() {
   return (
-    <section id="programs" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+    <section id="programs" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28 bg-transparent">
       <div id="programs-nav" className="absolute -top-20" />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-500/5 via-green-500/5 to-accent-500/5 rounded-full blur-3xl" />
@@ -64,8 +64,8 @@ export function SectionPrograms() {
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-950 dark:text-white sm:text-4xl lg:text-5xl leading-[1.1]">
             Our Programs & Services
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">
-            Comprehensive initiatives designed to create lasting impact in communities across India.
+           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-300">
+             Comprehensive initiatives designed to create lasting impact in communities across India.
           </p>
         </motion.div>
 
@@ -79,7 +79,7 @@ export function SectionPrograms() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/30 p-8 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-700/30 p-8 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className={`absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 rounded-full ${colors.bg} blur-3xl transition-all duration-500 ${colors.hoverBg}`} />
                 <div className="relative">
@@ -91,7 +91,7 @@ export function SectionPrograms() {
                   <h3 className="font-display text-xl font-semibold text-brand-950 dark:text-white mb-3">
                     {program.title}
                   </h3>
-                  <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+                  <p className="text-slate-500 dark:text-slate-300 leading-relaxed text-sm">
                     {program.description}
                   </p>
                   <button className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300 transition-colors group/btn">

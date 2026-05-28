@@ -25,7 +25,7 @@ export function DonationTracker() {
   const percentage = (current / target) * 100;
 
   return (
-    <div className="rounded-2xl bg-white p-8 shadow-lg">
+    <div className="rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-lg">
       <h3 className="font-display text-xl font-semibold text-brand-900">
         Fundraising Progress
       </h3>
@@ -42,18 +42,18 @@ export function DonationTracker() {
           <span className="font-semibold text-brand-900">
             ₹{Math.floor(amount).toLocaleString()}
           </span>
-          <span className="text-slate-500">
+          <span className="text-slate-500 dark:text-slate-400">
             Goal: ₹{target.toLocaleString()}
           </span>
         </div>
-        <p className="mt-2 text-center text-xs text-slate-400">
+        <p className="mt-2 text-center text-xs text-slate-400 dark:text-slate-500">
           {percentage.toFixed(1)}% of our goal achieved
         </p>
       </div>
 
       {/* Recent Donors */}
       <div className="mt-6 border-t border-brand-100 pt-6">
-        <p className="text-sm font-semibold text-slate-600 mb-3">Recent Donors</p>
+        <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">Recent Donors</p>
         <div className="space-y-2">
           {[
             { name: "Anonymous", amount: "₹10,000", time: "2 hours ago" },
@@ -65,7 +65,7 @@ export function DonationTracker() {
                 <div className="h-8 w-8 rounded-full bg-brand-200 animate-pulse" />
                 <div>
                   <p className="text-sm font-medium text-brand-900">{donor.name}</p>
-                  <p className="text-xs text-slate-400">{donor.time}</p>
+                  <p className="text-xs text-slate-400 dark:text-slate-500">{donor.time}</p>
                 </div>
               </div>
               <span className="text-sm font-semibold text-accent-600">{donor.amount}</span>

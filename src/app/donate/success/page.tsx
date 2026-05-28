@@ -45,18 +45,18 @@ function SuccessContent() {
 
         <div className="p-6 sm:p-8 space-y-6">
           <div className="text-center">
-            <p className="text-brand-500 text-sm mb-1">Donation Amount</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mb-1">Donation Amount</p>
             <p className="text-4xl font-bold text-green-600 dark:text-green-400">
               ₹{amountNum.toLocaleString()}
             </p>
           </div>
 
           <div className="bg-surface-50 dark:bg-brand-800/30 rounded-xl p-5 space-y-4">
-            <h3 className="font-semibold text-sm uppercase tracking-wide text-brand-500">Payment Details</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400">Payment Details</h3>
             
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="text-brand-500 text-sm">Order ID</span>
+                <span className="text-slate-500 dark:text-slate-400 text-sm">Order ID</span>
                 <div className="flex items-center gap-2">
                   <code className="text-sm font-mono bg-surface-100 dark:bg-brand-800 px-2 py-1 rounded">
                     {orderId}
@@ -70,14 +70,14 @@ function SuccessContent() {
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-brand-500 text-sm">Payment ID</span>
+                <span className="text-slate-500 dark:text-slate-400 text-sm">Payment ID</span>
                 <code className="text-sm font-mono bg-surface-100 dark:bg-brand-800 px-2 py-1 rounded">
                   {paymentId}
                 </code>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-brand-500 text-sm">Date</span>
-                <span className="text-sm font-medium">
+                <span className="text-slate-500 dark:text-slate-400 text-sm">Date</span>
+                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
                   {new Date().toLocaleDateString("en-IN", {
                     year: "numeric",
                     month: "long",
@@ -117,9 +117,9 @@ function SuccessContent() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="text-brand-500 text-sm">
-          On behalf of {SITE.name}, we express our heartfelt gratitude for your support.
-        </p>
+      <p className="text-slate-500 dark:text-slate-400 text-sm">
+        On behalf of {SITE.name}, we express our heartfelt gratitude for your support.
+      </p>
       </div>
     </motion.div>
   );

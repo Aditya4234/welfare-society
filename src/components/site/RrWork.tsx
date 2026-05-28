@@ -17,7 +17,7 @@ export default function RrWork() {
               <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
                 R&amp;R Work
               </h1>
-              <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                 View our R&amp;R work document (PDF). If you need a printed copy or verification,
                 contact our office.
               </p>
@@ -43,8 +43,8 @@ export default function RrWork() {
 
             <aside className="card rounded-2xl p-6">
               <p className="text-sm font-semibold text-brand-950">Tip</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                PDF opens in a new tab. If it doesn’t load on mobile, use “Download” from the
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                PDF opens in a new tab. If it doesn&apos;t load on mobile, use &ldquo;Download&rdquo; from the
                 browser menu.
               </p>
               <div className="mt-5 rounded-xl border border-brand-900/10 bg-white/70 p-4">

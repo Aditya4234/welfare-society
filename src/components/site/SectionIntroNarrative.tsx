@@ -19,7 +19,7 @@ export function SectionIntroNarrative() {
               and Inclusive Society
             </h2>
 
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-600">
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               Hope & Care Welfare Society is a non-profit organization
               working for the upliftment of underprivileged communities.
               We focus on education, healthcare, women empowerment,

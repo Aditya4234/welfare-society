@@ -14,7 +14,7 @@ export function SectionResources() {
             Helpful Resources
           </div>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl lg:text-[2.75rem] leading-[1.1]">Resources</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-slate-600">
+          <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Practical tools for patients, families, and partners — updated as our programs grow.
           </p>
         </div>
@@ -26,7 +26,7 @@ export function SectionResources() {
                   {item.icon}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-brand-900 leading-tight">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{item.body}</p>
                 <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 underline-offset-4 transition-all duration-300 hover:underline group-hover:text-accent-700">
                   Request access
                   <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

@@ -55,7 +55,7 @@ export function Counter({ end, duration = 2000, suffix = "", label }: CounterPro
       <p className="font-display text-5xl font-bold text-brand-900 md:text-6xl">
         {count.toLocaleString()}{suffix}
       </p>
-      <p className="mt-2 text-sm font-medium text-slate-600">{label}</p>
+      <p className="mt-2 text-sm font-medium text-slate-600 dark:text-slate-300">{label}</p>
     </div>
   );
 }

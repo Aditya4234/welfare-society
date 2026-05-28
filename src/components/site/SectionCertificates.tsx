@@ -42,7 +42,7 @@ export function SectionCertificates() {
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl lg:text-[2.75rem] leading-[1.1]">
             Registrations & Certificates
           </h2>
-          <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             {SITE.name} is a fully compliant and registered non-profit organization.
           </p>
         </div>
@@ -67,8 +67,8 @@ export function SectionCertificates() {
                   <h3 className="font-display text-lg font-semibold text-brand-900">
                     {cert.title}
                   </h3>
-                  <p className="mt-1 text-sm text-slate-600">{cert.description}</p>
-                  <p className="mt-2 text-xs text-slate-400">Issued by: {cert.issuedBy}</p>
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{cert.description}</p>
+                  <p className="mt-2 text-xs text-slate-400 dark:text-slate-500">Issued by: {cert.issuedBy}</p>
                 </div>
               </div>
             </div>

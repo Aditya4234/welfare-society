@@ -50,8 +50,8 @@ function FailureContent() {
           </div>
 
           <div className="rounded-xl bg-surface-50 dark:bg-brand-800/30 p-5">
-            <h3 className="font-semibold text-sm mb-3">Important Notes</h3>
-            <ul className="space-y-2 text-sm text-brand-500">
+            <h3 className="font-semibold text-sm mb-3 text-slate-900 dark:text-slate-100">Important Notes</h3>
+            <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
               <li className="flex gap-2">
                 <span className="text-green-500 mt-0.5">•</span>
                 If any amount was deducted, it will be automatically refunded to your account within 5-7 business days.
@@ -88,21 +88,21 @@ function FailureContent() {
       </div>
 
       <div className="mt-8 card rounded-xl p-5">
-        <h3 className="font-semibold text-center mb-4">Need Help?</h3>
+        <h3 className="font-semibold text-center mb-4 text-slate-900 dark:text-slate-100">Need Help?</h3>
         <div className="grid sm:grid-cols-2 gap-3">
           <a
             href={`tel:${CONTACT.helpline}`}
             className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-surface-50 dark:bg-brand-800/30 border border-surface-200 dark:border-brand-700 hover:border-accent-300 transition-all"
           >
             <Phone className="w-4 h-4 text-accent-600" />
-            <span className="text-sm font-medium">{CONTACT.helpline}</span>
+            <span className="text-sm font-medium text-slate-900 dark:text-slate-100">{CONTACT.helpline}</span>
           </a>
           <a
             href={`mailto:${CONTACT.email}`}
             className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-surface-50 dark:bg-brand-800/30 border border-surface-200 dark:border-brand-700 hover:border-accent-300 transition-all"
           >
             <Mail className="w-4 h-4 text-accent-600" />
-            <span className="text-sm font-medium">{CONTACT.email}</span>
+            <span className="text-sm font-medium text-slate-900 dark:text-slate-100">{CONTACT.email}</span>
           </a>
         </div>
       </div>

@@ -14,7 +14,7 @@ export function SectionNewsHighlights() {
     id: `news-${i}`,
 
     content: (
-      <article className="overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <article className="overflow-hidden rounded-3xl bg-white dark:bg-slate-800 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
         
         <div className="flex flex-col-reverse md:flex-row">
           {/* Content */}
@@ -40,12 +40,12 @@ export function SectionNewsHighlights() {
           </div>
 
           {/* Title */}
-          <h3 className="font-display text-2xl font-semibold leading-tight text-slate-900">
+          <h3 className="font-display text-2xl font-semibold leading-tight text-slate-900 dark:text-white">
             {n.title}
           </h3>
 
           {/* Description */}
-          <p className="mt-4 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
             {n.body}
           </p>
 
@@ -88,7 +88,7 @@ export function SectionNewsHighlights() {
   }));
 
   return (
-    <section id="news" className="scroll-mt-20 bg-[var(--surface)]">
+    <section id="news" className="scroll-mt-20 bg-transparent">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         
         {/* Section Heading */}
@@ -102,7 +102,7 @@ export function SectionNewsHighlights() {
             News & Highlights
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Stay updated with our latest activities, achievements,
             and community impact stories.
           </p>

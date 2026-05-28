@@ -51,16 +51,16 @@ export function SectionVisionImpact() {
           </div>
         </div>
       </section>
-      <section id="involved" className="scroll-mt-20 border-t border-white/10 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section id="involved" className="scroll-mt-20 border-t border-white/10 bg-transparent px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 section-animate">
             {stats.map((stat) => (
-              <div key={stat.label} className="group animate-fade-in-up text-center rounded-2xl border border-brand-900/8 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-200">
+              <div key={stat.label} className="group animate-fade-in-up text-center rounded-2xl border border-brand-900/8 bg-white dark:bg-slate-800 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-brand-200">
                 <div className="flex justify-center text-brand-600 mb-4 group-hover:text-accent-600 transition-colors duration-300">
                   {stat.icon}
                 </div>
                 <p className="font-display text-4xl font-bold text-brand-900">{stat.number}</p>
-                <p className="mt-2 text-sm font-medium text-slate-600">{stat.label}</p>
+                <p className="mt-2 text-sm font-medium text-slate-600 dark:text-slate-300">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -68,7 +68,7 @@ export function SectionVisionImpact() {
             <h2 className="font-display text-2xl font-semibold text-brand-900 sm:text-3xl leading-tight">
               Badlaav mein hissa lein
             </h2>
-            <p className="mx-auto mt-4 text-lg leading-relaxed text-slate-600">
+            <p className="mx-auto mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               Volunteer banein, daan dein, ya bas apne aas-paas logon ke saath baat share karein — har kadam maayne rakhta hai.
             </p>
             <a

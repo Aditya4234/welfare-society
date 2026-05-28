@@ -31,11 +31,12 @@ export function SectionTestimonials() {
 
   return (
     <section className="relative overflow-hidden py-20 sm:py-28">
-      <div className="absolute inset-0 gradient-primary" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(249,115,22,0.1),transparent)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-blue-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(59,130,246,0.12),transparent)]" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
-        <div className="absolute bottom-20 -right-32 w-80 h-80 rounded-full bg-accent-500/10 blur-3xl" />
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -45,13 +46,13 @@ export function SectionTestimonials() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-brand-100 mb-6 ring-1 ring-white/20 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white/80 mb-6 ring-1 ring-white/20 backdrop-blur-sm">
             Testimonials
           </div>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl leading-[1.1]">
             Voices of Impact
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-100">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
             Hear from the people whose lives have been touched by our work.
           </p>
         </motion.div>
@@ -77,12 +78,12 @@ export function SectionTestimonials() {
                     <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                   ))}
                 </div>
-                <blockquote className="text-lg sm:text-xl leading-relaxed text-brand-50 italic mb-6 max-w-2xl mx-auto">
+                <blockquote className="text-lg sm:text-xl leading-relaxed text-white/90 italic mb-6 max-w-2xl mx-auto">
                   &ldquo;{t.content}&rdquo;
                 </blockquote>
                 <div>
                   <p className="font-display text-lg font-semibold text-white">{t.name}</p>
-                  <p className="text-sm text-brand-200">{t.role}</p>
+                  <p className="text-sm text-white/60">{t.role}</p>
                 </div>
               </div>
             </motion.div>

@@ -25,8 +25,12 @@ export function SectionStories() {
 
   return (
     <section id="stories" className="scroll-mt-20 relative overflow-hidden py-20 sm:py-28">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-40 right-20 w-80 h-80 bg-accent-500/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-blue-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(59,130,246,0.12),transparent)]" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl animate-pulse-soft" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/5 blur-3xl" />
       </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -35,13 +39,13 @@ export function SectionStories() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-800 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-brand-700 dark:text-brand-200 mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white/80 mb-6 ring-1 ring-white/20 backdrop-blur-sm">
             Success Stories
           </div>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-950 dark:text-white sm:text-4xl lg:text-5xl leading-[1.1]">
             Real Lives, Real Impact
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
             Every number represents a real person whose life has been transformed through your support.
           </p>
         </motion.div>
@@ -95,7 +99,7 @@ export function SectionStories() {
 
                   <button
                     onClick={() => setSelectedStory(i)}
-                    className="mt-5 w-full py-2.5 rounded-xl bg-brand-950 dark:bg-white text-white dark:text-brand-950 text-sm font-semibold hover:bg-brand-900 dark:hover:bg-slate-100 transition-all cursor-pointer"
+                    className="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-accent-600 to-accent-500 text-white text-sm font-semibold hover:from-accent-700 hover:to-accent-600 transition-all cursor-pointer shadow-lg shadow-accent-500/25"
                   >
                     Read Full Story
                   </button>
